@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "produto.h"
 #include "venda.h"
+
 int main() {
     Produto produtos[MAX_PRODUTOS];
-    int quantidadeProdutos = 50;
+    int quantidadeProdutos = 0;
     int opcao;
 
     do {

@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "produto.h"
 
-int cadastrarProduto(Produto produtos[], int quantidadeProdutos){
-if (quantidadeProdutos >= MAX_PRODUTOS) {
-    printF ("\Nerro: Limite maximo de produtos atigindo (%d)!\n", MAX_PRODUTOS);
-    return quantidadeProdutos;
-}
-int i = quantidadeProdutos:
+int cadastrarProduto(Produto produtos[], int quantidadeProdutos) {
+    if (quantidadeProdutos >= MAX_PRODUTOS) {
+        printf("\nErro: Limite maximo de produtos atingido (%d)!\n", MAX_PRODUTOS); // CORRIGIDO: printf e \n
+        return quantidadeProdutos;
+    }
+
+    int i = quantidadeProdutos;
     printf("\n--- CADASTRO DE PRODUTO [%d] ---\n", i + 1);
 
     printf("Codigo: ");
@@ -23,22 +24,24 @@ int i = quantidadeProdutos:
 
     printf(">> Produto cadastrado com sucesso!\n");
     return quantidadeProdutos + 1;
-    }
+}
+
 void listarProdutos(Produto produtos[], int quantidadeProdutos) {
     printf("\n===== LISTA DE PRODUTOS / ESTOQUE =====\n");
     if (quantidadeProdutos == 0) {
         printf("Nenhum produto cadastrado ate o momento.\n");
         return;
     }
+
     printf("INDICE\tCODIGO\tNOME\t\tPRECO\t\tESTOQUE\n");
-    for (int i = 0; i < quantidadeProdutos; i ++) {
-        printf("[%d]\t%d\t%-10s\tR% %.2f\t%d un\n",
+    for (int i = 0; i < quantidadeProdutos; i++) {
+        printf("[%d]\t%d\t%-10s\tR$ %.2f\t%d un\n",
                i,
-               produtos[i].codigo
-               produtos[i].nome
-               produtos[i].preco
+               produtos[i].codigo,
+               produtos[i].nome,
+               produtos[i].preco,
                produtos[i].quantidade);
-               }
+    }
 }
 
 int buscarProduto(Produto produtos[], int quantidadeProdutos, int codigo) {
