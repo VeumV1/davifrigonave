@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1790076940 source:c:\users\aluno\downloads\sistemavendas\sistemavendas\sistemavendas\src\produto.c
+	<stdio.h>
+	"produto.h"
+
+1790076940 c:\users\aluno\downloads\sistemavendas\sistemavendas\sistemavendas\include\produto.h
+
